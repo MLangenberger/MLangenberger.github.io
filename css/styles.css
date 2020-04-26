@@ -1,0 +1,111 @@
+html {
+  height: 100%
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Dita;
+  src: url('./Dita-Sweet.ttf');
+}
+
+body {
+  width: 770px;
+  display: block;
+  margin: 0 auto;
+}
+
+header {
+  margin: 50px 0 10px 0;
+  padding: 25px 0;
+  background: #fff;
+  text-align: center;
+  width: 100%
+}
+
+h1 {
+  font-family: Dita;
+  margin: 0;
+  letter-spacing: 0.2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: Dita;
+  font-size: 30px;
+  color: black;
+}
+
+img {
+  height: 250px;
+}
+
+
+/* all about grid */
+.grid {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-template-areas: "box1 box2 box3"
+}
+
+#part1{
+  grid-area: box1;
+  justify-self: center;
+  align-self: center;
+}
+
+#part2 {
+  grid-area: box2;
+  justify-self: center;
+  align-self: center;
+}
+
+#part3 {
+  grid-area: box3;
+  justify-self: center;
+  align-self: center;
+}
+
+/* all about hover */
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(255,255,255, 0.7);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
